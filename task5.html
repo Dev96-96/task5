@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Job Board</h1>
+    <nav>
+      <a href="job-listings.html">Browse Jobs</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="featured-jobs">
+      <h2>Featured Job Listings</h2>
+      <div class="job-listings">
+        <div class="job-card">
+          <h3>Software Engineer</h3>
+          <p>Company: Tech Solutions</p>
+          <p>Location: Remote</p>
+          <a href="job-detail.html">View Details</a>
+        </div>
+        <div class="job-card">
+          <h3>Marketing Manager</h3>
+          <p>Company: Marketing Inc.</p>
+          <p>Location: New York, NY</p>
+          <a href="job-detail.html">View Details</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Job Board</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listings</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Browse Job Listings</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-bar">
+      <input type="text" id="search" placeholder="Search jobs..." oninput="filterJobs()">
+    </section>
+
+    <section class="job-listings" id="jobListings">
+      <!-- Job cards will be inserted dynamically here by JavaScript -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Job Board</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Job Detail</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="job-listings.html">Job Listings</a>
+      <a href="apply.html">Apply</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="job-detail">
+      <h2>Software Engineer</h2>
+      <p><strong>Company:</strong> Tech Solutions</p>
+      <p><strong>Location:</strong> Remote</p>
+      <p><strong>Description:</strong> We are looking for a skilled software engineer to join our growing team. The ideal candidate will have a passion for technology and problem-solving.</p>
+      <p><strong>Salary:</strong> $100,000/year</p>
+      <button onclick="window.location.href='apply.html'">Apply Now</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Job Board</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Job</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Apply for Software Engineer</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="job-listings.html">Job Listings</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="application-form">
+      <form id="applicationForm">
+        <label for="coverLetter">Cover Letter:</label>
+        <textarea id="coverLetter" required></textarea>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" required>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Job Board</p>
+  </footer>
+
+  <script>
+    document.getElementById("applicationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Your application has been submitted. You will be notified via email.");
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Create an Account</h1>
+  </header>
+
+  <main>
+    <section class="register-form">
+      <form action="#">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Job Board</p>
+  </footer>
+</body>
+</html>
